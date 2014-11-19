@@ -1,0 +1,6 @@
+INSTUPcdscrawler.cdscrawler.pipelines
+/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/pipelines.py
+INFOS:&&1|1|2|0&&2|3|2|1
+process_item=3
+CdscrawlerPipeline=1
+cdscrawler.cdscrawler.pipelines=2

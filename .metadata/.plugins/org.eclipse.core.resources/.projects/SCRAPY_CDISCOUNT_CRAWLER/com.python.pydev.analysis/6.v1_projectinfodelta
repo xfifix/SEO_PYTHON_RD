@@ -1,0 +1,7 @@
+INSTUPcdscrawler.cdscrawler.settings
+/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/settings.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0
+NEWSPIDER_MODULE=4
+cdscrawler.cdscrawler.settings=2
+BOT_NAME=1
+SPIDER_MODULES=3
