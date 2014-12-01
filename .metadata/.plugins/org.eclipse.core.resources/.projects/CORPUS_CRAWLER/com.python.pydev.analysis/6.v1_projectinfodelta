@@ -1,14 +1,1 @@
-INSTUPcorpuscrawler.corpuscrawler.spiders.spider
-/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/spiders/spider.py
-INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&3|5|2|1&&3|6|2|1&&2|7|2|1&&1|8|2|0&&3|3|2|8&&3|4|2|8&&3|5|2|8&&3|9|2|8&&3|6|2|8&&2|10|2|8&&2|11|2|8
-parse_item=10
-start_urls=5
-corpuscrawler.corpuscrawler.spiders.spider=2
-name=3
-parse_o=7
-myCorpus=1
-handle_httpstatus_list=9
-MyCrawlerSpider=8
-allowed_domains=4
-rules=6
-response_status_message=11
+DELSTRcorpuscrawler.main

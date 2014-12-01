@@ -4,7 +4,7 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.selector import HtmlXPathSelector
 from twisted.web import http
 
-from cdscrawler.items import cdscrawlerItem
+from cdscrawler.cdscrawler.items import cdscrawlerItem
 
 
 class MyCrawlerSpider(CrawlSpider):

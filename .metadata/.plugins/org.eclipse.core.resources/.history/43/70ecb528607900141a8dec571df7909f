@@ -6,7 +6,7 @@ from scrapy.selector import Selector
 import urlparse
 
 class MyCrawlerSpider(CrawlSpider):
-    name="corpuscrawler"
+    name="gamekult"
     allowed_domains  = ['www.gamekult.com']
 
     start_urls = ['http://www.gamekult.com']
