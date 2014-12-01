@@ -1,0 +1,53 @@
+-- VERSION_4
+-- START DISKCACHE
+/home/sduprey/My_Code/My_Python_Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/CORPUS_CRAWLER/com.python.pydev.analysis/v2_indexcache
+corpuscrawler.corpuscrawler.items|1417439903000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/items.py
+corpuscrawler.main|1417439758000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/main.py
+corpuscrawler.corpuscrawler.spiders.__init__|1415985446000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/spiders/__init__.py
+corpuscrawler.corpuscrawler.__init__|1415985446000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/__init__.py
+corpuscrawler.corpuscrawler.pipelines|1417439722000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/pipelines.py
+corpuscrawler.corpuscrawler.settings|1417439854000|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/settings.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+2=corpuscrawler.corpuscrawler.items
+4=corpuscrawler.main
+6=CorpuscrawlerPipeline
+5=CorpuscrawlerItem
+3=corpuscrawler.corpuscrawler.pipelines
+1=corpuscrawler.corpuscrawler.settings
+-- END DICTIONARY
+-- START TREE 1
+17
+bot|1|BOT_NAME!11@
+con|2|CONCURRENT_REQUESTS!11@CONCURRENT_REQUESTS_PER_DOMAIN!11@
+coo|1|COOKIES_ENABLED!11@
+cor|2|CorpuscrawlerItem!17@CorpuscrawlerPipeline!25@
+dep|1|DEPTH_LIMIT!11@
+dow|1|DOWNLOAD_TIMEOUT!11@
+fee|0|
+htt|0|
+log|1|LOG_LEVEL!11@
+mai|1|main!34@
+myc|0|
+new|1|NEWSPIDER_MODULE!11@
+red|2|REDIRECT_MAX_TIMES!11@REDIRECT_ENABLED!11@
+ret|1|RETRY_ENABLED!11@
+rob|1|ROBOTSTXT_OBEY!11@
+spi|1|SPIDER_MODULES!11@
+use|0|
+-- END TREE
+-- START TREE 2
+11
+all|0|
+con|1|contenu!5&19@
+han|0|
+nam|0|
+par|0|
+pro|1|process_item!6&26@
+res|0|
+rul|0|
+sta|0|
+tit|1|titre!5&19@
+url|1|url!5&19@
+-- END TREE
