@@ -1,2 +1,9 @@
 MODULES_MANAGER_V2
+cdscrawler.cdscrawler.__init__|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/__init__.py
+cdscrawler.cdscrawler.exporter|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/exporter.py
+cdscrawler.cdscrawler.items|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/items.py
+cdscrawler.cdscrawler.pipelines|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/pipelines.py
+cdscrawler.cdscrawler.settings|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/settings.py
+cdscrawler.cdscrawler.spiders.__init__|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/spiders/__init__.py
 cdscrawler.cdscrawler.spiders.spider|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/cdscrawler/spiders/spider.py
+cdscrawler.main|/home/sduprey/My_Code/My_Python_Workspace/SCRAPY_CDISCOUNT_CRAWLER/cdscrawler/main.py

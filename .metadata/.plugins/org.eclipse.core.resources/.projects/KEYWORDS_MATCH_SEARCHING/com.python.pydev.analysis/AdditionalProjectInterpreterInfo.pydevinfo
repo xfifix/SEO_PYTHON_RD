@@ -1,12 +1,19 @@
 -- VERSION_4
 -- START DISKCACHE
 /home/sduprey/My_Code/My_Python_Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/KEYWORDS_MATCH_SEARCHING/com.python.pydev.analysis/v2_indexcache
+com.__init__|1419236745000|/home/sduprey/My_Code/My_Python_Workspace/KEYWORDS_MATCH_SEARCHING/com/__init__.py
+com.processing.__init__|1419236745000|/home/sduprey/My_Code/My_Python_Workspace/KEYWORDS_MATCH_SEARCHING/com/processing/__init__.py
+com.processing.post_request|1419236851000|/home/sduprey/My_Code/My_Python_Workspace/KEYWORDS_MATCH_SEARCHING/com/processing/post_request.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+1
+1=com.processing.post_request
 -- END DICTIONARY
 -- START TREE 1
-0
+3
+dat|1|DATA_DIR!11@
+ext|1|extract!10@
+loc|1|LOC!11@
 -- END TREE
 -- START TREE 2
 0
