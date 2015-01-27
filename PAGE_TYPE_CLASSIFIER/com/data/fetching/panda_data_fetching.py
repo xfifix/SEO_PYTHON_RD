@@ -153,6 +153,7 @@ def update_database_with_page_type(conn, classified_values):
         cursor.execute(updating_request,(page_type,url)); 
 
     cursor.close()
+    conn.commit()
        
 def assign_enumerated_value(page_type): 
     if "FicheProduit" == page_type :

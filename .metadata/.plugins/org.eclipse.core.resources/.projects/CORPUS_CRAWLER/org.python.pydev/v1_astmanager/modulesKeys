@@ -1,8 +1,1 @@
 MODULES_MANAGER_V2
-corpuscrawler.corpuscrawler.__init__|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/__init__.py
-corpuscrawler.corpuscrawler.items|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/items.py
-corpuscrawler.corpuscrawler.pipelines|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/pipelines.py
-corpuscrawler.corpuscrawler.settings|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/settings.py
-corpuscrawler.corpuscrawler.spiders.__init__|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/spiders/__init__.py
-corpuscrawler.corpuscrawler.spiders.spider|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/corpuscrawler/spiders/spider.py
-corpuscrawler.main|/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER/corpuscrawler/main.py
