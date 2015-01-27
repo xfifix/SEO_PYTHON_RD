@@ -57,8 +57,6 @@ def main():
     print type(y)
     print y.shape
     
-
-
     # fetching the data to predict
     to_predict_request = "select url, whole_text, title, h1, short_description, status_code, depth, outlinks_size, inlinks_size, nb_breadcrumbs, nb_aggregated_ratings, nb_ratings_values, nb_prices, nb_availabilities, nb_reviews, nb_reviews_count, nb_images, nb_search_in_url, nb_add_in_text, nb_filter_in_text, nb_search_in_text, nb_guide_achat_in_text, nb_product_info_in_text, nb_livraison_in_text, nb_garanties_in_text, nb_produits_similaires_in_text, nb_images_text, width_average, height_average, page_rank, page_type, concurrent_name, last_update, semantic_hits, semantic_title, inlinks_semantic, inlinks_semantic_count  from arbocrawl_results  where concurrent_name != 'Cdiscount-maison' "; 
     df_to_predict = pd.read_sql(to_predict_request, conn)
@@ -136,19 +134,26 @@ def main():
     
     url_validation_list = url_val_list.tolist()
     y_val_predicted_list = y_val_predicted.tolist()
-    
-    pprint.pprint(y_val_predicted_list)
-    pprint.pprint(url_validation_list)
-    
-    # print out the records using pretty print
-    # note that the NAMES of the columns are not shown, instead just indexes.
-    # for most people this isn't very useful so we'll show you how to return
-    # columns as a dictionary (hash) in the next example.
-    #pprint.pprint(url_list)
-    #pprint.pprint(semantic_list)
-    #pprint.pprint(predictor_list)
-    #pprint.pprint(output_list)
 
+#    displaying the classified data    
+#    pprint.pprint(y_val_predicted_list)
+#    pprint.pprint(url_validation_list)
+    classified_values = zip(url_validation_list, y_val_predicted_list)
+    print "Updating the database with the classification results"
+    update_database_with_page_type(conn, classified_values)
+    conn.close()
+
+
+def update_database_with_page_type(conn, classified_values):
+    updating_request = "update arbocrawl_results set page_type=%s where url=%s";
+    # conn.cursor will return a cursor object, you can use this cursor to perform queries
+    cursor = conn.cursor()
+    for url, page_type in classified_values :
+        print "Updating row url "+url+" with "+page_type
+        cursor.execute(updating_request,(page_type,url)); 
+
+    cursor.close()
+       
 def assign_enumerated_value(page_type): 
     if "FicheProduit" == page_type :
         return 0;
