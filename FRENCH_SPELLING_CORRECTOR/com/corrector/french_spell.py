@@ -19,6 +19,7 @@ def train(features):
 training_path = '/home/sduprey/My_Data/My_Spelling_Corrector_Data/titres_produits.csv'
 NWORDS = train(words(file(training_path).read()))
 
+
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
 def edits1(word):
@@ -68,7 +69,7 @@ french_test = {'tutoriel':'tutorial','manger':'menger',
                'bancaire' : 'banquaire', 'bissextile' : 'bisextile', 'bizarre' : 'bizard',
                'blanchiment':'blanchiement', 'blizzard' : 'blizard','carrousel':'carroussel',
                'catéchisme' : 'cathéchisme', 'cueillir' : 'ceuillir','châtain' : 'chatain',
-               'cherté':'chèreté','coalition' : 'coallition','concurrence':'concurent',
+               'cherté':'chèreté','coalition' : 'coallition','concurrence':'concurence',
                'conjugaison':'conjuguaison','controverse':'contreverse','courir':'courrir',
                'cigogne' : 'cygogne', 'déconnexion' : 'déconnection','dédicace' : 'dédicasse',
                'desservir' : 'déservir','dilemme' : 'dilemne', 'diluvien' : 'dilluvien',
@@ -91,14 +92,14 @@ french_test = {'tutoriel':'tutorial','manger':'menger',
                'succédané' : 'succédanné', 'synchrone' : 'sinchrone',  'syphilis' : 'Syphillis', 'théâtre' : 'théatre',
                'souffrir' : 'soufrir', 'thème' : 'tème', 'tonnerre' : 'tonnère', 'toponymie':'toponomie',
                'trafic' : 'traffic', 'tranquillité':'tranquillitée','vaillamment' :'vaillemment',
-               'voirie' : 'voierie', 'vraisemblable':'vraissemblable','waggon':'wagon'}  
+               'voirie' : 'voirie','voierie' : 'voierie','vraisemblable':'vraissemblable','waggon':'wagon'}  
                 
-               
-                
-        
-
-
-
 if __name__ == '__main__':
+    f1=open('/home/sduprey/My_Data/My_Spelling_Corrector_Data/dictionnary.csv', 'w+')
+    f1.write('name; value\n') 
+    #NWORDS_sorted=sorted(NWORDS)
+    for keys,values in NWORDS.items():
+        f1.write(keys);f1.write(';');f1.write(str(values));f1.write('\n');
+    f1.close()
     print spelltest(french_test)
 
