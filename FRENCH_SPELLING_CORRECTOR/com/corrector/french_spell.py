@@ -95,10 +95,12 @@ french_test = {'tutoriel':'tutorial','manger':'menger',
                'voirie' : 'voirie','voierie' : 'voierie','vraisemblable':'vraissemblable','waggon':'wagon'}  
                 
 if __name__ == '__main__':
-    f1=open('/home/sduprey/My_Data/My_Spelling_Corrector_Data/dictionnary.csv', 'w+')
+    filename = '/home/sduprey/My_Data/My_Spelling_Corrector_Data/dictionnary.csv'
+    print 'Writing file to disk : '+filename
+    f1=open(filename, 'w+')
     f1.write('name; value\n') 
     #NWORDS_sorted=sorted(NWORDS)
-    for keys,values in NWORDS.items():
+    for keys,values in sorted(NWORDS.items()):
         f1.write(keys);f1.write(';');f1.write(str(values));f1.write('\n');
     f1.close()
     print spelltest(french_test)
