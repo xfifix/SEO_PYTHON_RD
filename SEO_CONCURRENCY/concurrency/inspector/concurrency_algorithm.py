@@ -17,8 +17,10 @@ def populate_semantic_referential() :
     CONCURRENCY_URL_REFERENTIAL={};# (url, semantics)
     CONCURRENCY_REQUEST_REFERENTIAL=[]; # [google_requests]
     for concurrent in CDISCOUNT_CONCURRENTS :  
-        # semantic crawl (TF/IDF, NGRAMS, TITLE, H1, METADESCR, ANCHORS, ANCHORS TF_IDF) and (TF PAGE, TF ANCHORS) for the panda & penguin filters
-        CONCURRENCY_URL_REFERENTIAL,CONCURRENCY_REQUEST_REFERENTIAL=semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL, CONCURRENCY_URL_REFERENTIAL, concurrent);
+        # semantic crawl (TF/IDF, NGRAMS, TITLE, H1, METADESCR, ANCHORS, ANCHORS TF_IDF) 
+        # and (TF PAGE, TF ANCHORS) for the panda & penguin filters
+        CONCURRENCY_URL_REFERENTIAL,CONCURRENCY_REQUEST_REFERENTIAL= semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL,
+        CONCURRENCY_URL_REFERENTIAL, concurrent);
         # request built from NGRAMS, TITLE, H1, ANCHORS from the site crawl
         # request built from auto completion and suggestion
         CONCURRENCY_REQUEST_REFERENTIAL=search_engine_completion_scraping(CONCURRENCY_REQUEST_REFERENTIAL, concurrent);
@@ -40,7 +42,8 @@ if __name__ == '__main__':
         if not isSemanticFoundInCdiscount(semantics) and page_type is 'FicheProduit' :
             # vendors must create offers
             market_place_create_offer(semantics)
-        elif not isSemanticFoundInCdiscount(semantics) and not page_type is 'FicheProduit' : # the page is navigation, products list, search results
+            # the page is navigation, products list, search results
+        elif not isSemanticFoundInCdiscount(semantics) and not page_type is 'FicheProduit' :           
             # edito must create content
             edito_create_content(semantics)
         else :
