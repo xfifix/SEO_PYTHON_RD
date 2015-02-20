@@ -8,6 +8,7 @@ def edito_create_content(semantics): return
 def checkPandaRatio(semantics): return
 def checkPenguinRatio(semantics) : return 
 def checkThematicPageRank(semantics): return 
+def getOutSiteIncomingLinks(CONCURRENCY_URL_REFERENTIAL) : return
 def etalonnate_quality_ranker(panda_ratios,penguin_ratios,semantics): return 
 def concurrency_detection(): CDISCOUNT_CONCURRENTS = []; return CDISCOUNT_CONCURRENTS
 def semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL): return CONCURRENCY_REQUEST_REFERENTIAL
@@ -19,11 +20,13 @@ def populate_semantic_referential(CDISCOUNT_CONCURRENTS) :
     for concurrent in CDISCOUNT_CONCURRENTS :  
         # semantic crawl (TF/IDF, NGRAMS, TITLE, H1, METADESCR, ANCHORS, ANCHORS TF_IDF) 
         # and (TF PAGE, TF ANCHORS) for the panda & penguin filters
-        # classifier features : DEPTH,NB_OUTLINKS,NB_INLINKS,NB_BREADCRUMBS,NB_AGGREGATED_RATINGS,NB_RATINGS_VALUES,NB_PRICES,
+        # classifier features : DEPTH,NB_OUTLINKS,NB_INLINKS,PAGE_RANK, NB_URL_UNDER, NB_BREADCRUMBS,NB_AGGREGATED_RATINGS,NB_RATINGS_VALUES,NB_PRICES,
         # NB_AVAILABILITIES,NB_REVIEWS,NB_IMAGES,NB_SEARCH_IN_URL,NB_ADD_IN_TEXT,NB_FILTER_IN_TEXT,NB_SEARCH_IN_TEXT,NB_GUIDE_ACHAT_IN_TEXT,
         # NB_PRODUCT_INFO_IN_TEXT, NB_LIVRAISON_IN_TEXT, NB_GARANTIES_IN_TEXT, NB_PRODUITS_SIMILAIRES_IN_TEXT,NB_IMAGES_TEXT
         CONCURRENCY_URL_REFERENTIAL,CONCURRENCY_REQUEST_REFERENTIAL= semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL,
-        CONCURRENCY_URL_REFERENTIAL, concurrent);
+                                                                                                   CONCURRENCY_URL_REFERENTIAL, concurrent);
+        # getting incoming links from outside thanks to Majestic
+        CONCURRENCY_URL_REFERENTIAL=getOutSiteIncomingLinks(CONCURRENCY_URL_REFERENTIAL)
         # request built from NGRAMS, TITLE, H1, ANCHORS from the site crawl
         # request built from auto completion and suggestion
         CONCURRENCY_REQUEST_REFERENTIAL=search_engine_completion_scraping(CONCURRENCY_REQUEST_REFERENTIAL, concurrent);
