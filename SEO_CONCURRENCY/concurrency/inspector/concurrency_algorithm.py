@@ -13,7 +13,7 @@ def concurrency_detection(): CDISCOUNT_CONCURRENTS = []; return CDISCOUNT_CONCUR
 def semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL): return CONCURRENCY_REQUEST_REFERENTIAL
 def search_engine_completion_scraping(CONCURRENCY_REQUEST_REFERENTIAL): return CONCURRENCY_REQUEST_REFERENTIAL
 def etalonnate_page_type_classifier(CONCURRENCY_URL_REFERENTIAL) : return
-def populate_semantic_referential() :
+def populate_semantic_referential(CDISCOUNT_CONCURRENTS) :
     CONCURRENCY_URL_REFERENTIAL={};# (url, semantics)
     CONCURRENCY_REQUEST_REFERENTIAL=[]; # [google_requests]
     for concurrent in CDISCOUNT_CONCURRENTS :  
