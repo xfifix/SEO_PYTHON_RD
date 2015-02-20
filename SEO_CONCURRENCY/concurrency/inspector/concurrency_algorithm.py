@@ -19,6 +19,9 @@ def populate_semantic_referential() :
     for concurrent in CDISCOUNT_CONCURRENTS :  
         # semantic crawl (TF/IDF, NGRAMS, TITLE, H1, METADESCR, ANCHORS, ANCHORS TF_IDF) 
         # and (TF PAGE, TF ANCHORS) for the panda & penguin filters
+        # classifier features : DEPTH,NB_OUTLINKS,NB_INLINKS,NB_BREADCRUMBS,NB_AGGREGATED_RATINGS,NB_RATINGS_VALUES,NB_PRICES,
+        # NB_AVAILABILITIES,NB_REVIEWS,NB_IMAGES,NB_SEARCH_IN_URL,NB_ADD_IN_TEXT,NB_FILTER_IN_TEXT,NB_SEARCH_IN_TEXT,NB_GUIDE_ACHAT_IN_TEXT,
+        # NB_PRODUCT_INFO_IN_TEXT, NB_LIVRAISON_IN_TEXT, NB_GARANTIES_IN_TEXT, NB_PRODUITS_SIMILAIRES_IN_TEXT,NB_IMAGES_TEXT
         CONCURRENCY_URL_REFERENTIAL,CONCURRENCY_REQUEST_REFERENTIAL= semantic_crawl(CONCURRENCY_REQUEST_REFERENTIAL,
         CONCURRENCY_URL_REFERENTIAL, concurrent);
         # request built from NGRAMS, TITLE, H1, ANCHORS from the site crawl
@@ -31,8 +34,9 @@ if __name__ == '__main__':
     CDISCOUNT_CONCURRENTS = concurrency_detection() 
     # we then use site crawling and auto-completion scraping to build our semantic request referential
     CONCURRENCY_URL_REFERENTIAL,CONCURRENCY_REQUEST_REFERENTIAL=populate_semantic_referential(CDISCOUNT_CONCURRENTS)
-    # we then inspect the concurrency position and how we can remedy to dislodge them
+    # we etalonnate a classifier thanks to the data previously collected
     PAGE_TYPE_CLASSIFIER = etalonnate_page_type_classifier(CONCURRENCY_URL_REFERENTIAL)
+     # we then inspect the concurrency position and how we can remedy to dislodge them
     for request in CONCURRENCY_REQUEST_REFERENTIAL :
         # the most difficult part to scale : you need proxys and multiple IPs to request heavily google
         url = locate_best_serp_inspector(request)
