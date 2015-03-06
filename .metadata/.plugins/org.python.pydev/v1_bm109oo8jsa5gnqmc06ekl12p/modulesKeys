@@ -944,6 +944,7 @@ PIL._webp|/usr/lib/python2.7/dist-packages/PIL/_webp.so
 PIL.tests|/usr/lib/python2.7/dist-packages/PIL/tests.py
 PSDraw|/usr/lib/python2.7/dist-packages/PILcompat/PSDraw.py
 PngImagePlugin|/usr/lib/python2.7/dist-packages/PILcompat/PngImagePlugin.py
+PyKate4.__init__|/usr/lib/python2.7/dist-packages/PyKate4/__init__.py
 Queue|/usr/lib/python2.7/Queue.py
 ScrolledText|/usr/lib/python2.7/lib-tk/ScrolledText.py
 SimpleDialog|/usr/lib/python2.7/lib-tk/SimpleDialog.py
