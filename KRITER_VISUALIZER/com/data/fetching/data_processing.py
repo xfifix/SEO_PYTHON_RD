@@ -11,6 +11,9 @@ import matplotlib.pyplot as plt
 
 def main():
     #Define our connection string
+    pictures_saving_path = '/home/sduprey/My_Data/My_Kriter_Data/My_Kriter_Pictures/'
+
+
     conn_string = "host='localhost' dbname='KRITERDB' user='postgres' password='mogette'"
     # print the connection string we will use to connect
     print "Connecting to database\n    ->%s" % (conn_string)
@@ -50,7 +53,7 @@ def main():
         plt.title(unicode("nb_distinct_brand Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.savefig(unicode("nb_distinct_brand_"+magasin_to_loop+".png",'utf-8'))
+        plt.savefig(unicode(pictures_saving_path+"nb_distinct_brand_"+magasin_to_loop+".png",'utf-8'))
         
         my_magasin_request = "select nb_distinct_magasin from CATALOG where nb_distinct_magasin is not null and magasin=(%s)"
         print "Executing the following request to fetch data for  magasins : " +magasin_to_loop+ my_magasin_request
@@ -68,7 +71,7 @@ def main():
         plt.title(unicode("nb_distinct_magasin Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.savefig(unicode("nb_distinct_magasin_"+magasin_to_loop+".png",'utf-8'))
+        plt.savefig(unicode(pictures_saving_path+"nb_distinct_magasin_"+magasin_to_loop+".png",'utf-8'))
         
         my_state_request = "select nb_distinct_state from CATALOG where nb_distinct_state is not null and magasin=(%s)"
         print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_state_request
@@ -86,7 +89,7 @@ def main():
         plt.title(unicode('nb_distinct_state_'+magasin_to_loop+'.png','utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.savefig(unicode("nb_distinct_state_"+magasin_to_loop+".png",'utf-8'))
+        plt.savefig(unicode(pictures_saving_path+"nb_distinct_state_"+magasin_to_loop+".png",'utf-8'))
         #print type(y)
         #print y.shape
         
@@ -106,7 +109,7 @@ def main():
         plt.title(unicode("nb_distinct_cat4 Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.savefig(unicode("nb_distinct_cat4_"+magasin_to_loop+".png",'utf-8'))
+        plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat4_"+magasin_to_loop+".png",'utf-8'))
         
         my_cat5_request = "select nb_distinct_cat5 from CATALOG where nb_distinct_cat5 is not null and magasin=(%s)"
         print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_cat5_request
@@ -124,7 +127,7 @@ def main():
         plt.title(unicode("nb_distinct_cat5 Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.savefig(unicode("nb_distinct_cat5_"+magasin_to_loop+".png",'utf-8'))
+        plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat5_"+magasin_to_loop+".png",'utf-8'))
         #print type(y)
         #print y.shape
 
