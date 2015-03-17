@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/sduprey/My_Code/My_Python_Workspace/CORPUS_CRAWLER"/>
+			<item value="/home/sduprey/My_Code/My_Python_Workspace/FRENCH_SPELLING_CORRECTOR"/>
+			<item value="/home/sduprey/My_Code/My_Python_Workspace/FULFILLMENT"/>
+			<item value="/home/sduprey/My_Code/My_Python_Workspace/KEYWORDS_MATCH_SEARCHING"/>
+			<item value="/home/sduprey/My_Code/My_Python_Workspace/PAGE_TYPE_CLASSIFIER"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 	<section name="NewWizardAction">
 		<item value="org.python.pydev.ui.wizards.project.PythonProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
