@@ -35,7 +35,7 @@ def main():
         # execute our Query
         # X = np.asarray(predictors_list);
         my_brand_request = "select nb_distinct_brand from CATALOG where nb_distinct_brand is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " + my_brand_request
+        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_brand_request
     
         # fetching data to display for magasin Musique
         cursor.execute(my_brand_request,(magasin_to_loop,)); 
@@ -47,13 +47,13 @@ def main():
         print type(X)
         print X.shape
         plt.hist(X)
-        plt.title("nb_distinct_brand Histogram"+magasin_to_loop)
+        plt.title(unicode("nb_distinct_brand Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.show()
+        plt.savefig(unicode("nb_distinct_brand_"+magasin_to_loop+".png",'utf-8'))
         
         my_magasin_request = "select nb_distinct_magasin from CATALOG where nb_distinct_magasin is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " + my_magasin_request
+        print "Executing the following request to fetch data for  magasins : " +magasin_to_loop+ my_magasin_request
     
         # fetching data to display for magasin Musique
         cursor.execute(my_magasin_request,(magasin_to_loop,)); 
@@ -65,13 +65,13 @@ def main():
         print type(X)
         print X.shape
         plt.hist(X)
-        plt.title("nb_distinct_magasin Histogram"+magasin_to_loop)
+        plt.title(unicode("nb_distinct_magasin Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.show()
+        plt.savefig(unicode("nb_distinct_magasin_"+magasin_to_loop+".png",'utf-8'))
         
         my_state_request = "select nb_distinct_state from CATALOG where nb_distinct_state is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " + my_state_request
+        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_state_request
     
         # fetching data to display for magasin Musique
         cursor.execute(my_state_request,(magasin_to_loop,)); 
@@ -83,15 +83,15 @@ def main():
         print type(X)
         print X.shape
         plt.hist(X)
-        plt.title("nb_distinct_state Histogram"+magasin_to_loop)
+        plt.title(unicode('nb_distinct_state_'+magasin_to_loop+'.png','utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.show()
+        plt.savefig(unicode("nb_distinct_state_"+magasin_to_loop+".png",'utf-8'))
         #print type(y)
         #print y.shape
         
         my_cat4_request = "select nb_distinct_cat4 from CATALOG where nb_distinct_cat4 is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " + my_cat4_request
+        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_cat4_request
     
         # fetching data to display for magasin Musique
         cursor.execute(my_cat4_request,(magasin_to_loop,)); 
@@ -103,13 +103,13 @@ def main():
         print type(X)
         print X.shape
         plt.hist(X)
-        plt.title("nb_distinct_cat4 Histogram"+magasin_to_loop)
+        plt.title(unicode("nb_distinct_cat4 Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.show()
+        plt.savefig(unicode("nb_distinct_cat4_"+magasin_to_loop+".png",'utf-8'))
         
         my_cat5_request = "select nb_distinct_cat5 from CATALOG where nb_distinct_cat5 is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " + my_cat5_request
+        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_cat5_request
     
         # fetching data to display for magasin Musique
         cursor.execute(my_cat5_request,(magasin_to_loop,)); 
@@ -121,10 +121,10 @@ def main():
         print type(X)
         print X.shape
         plt.hist(X)
-        plt.title("nb_distinct_cat5 Histogram"+magasin_to_loop)
+        plt.title(unicode("nb_distinct_cat5 Histogram"+magasin_to_loop,'utf-8'))
         plt.xlabel("Value")
         plt.ylabel("Frequency")
-        plt.show()
+        plt.savefig(unicode("nb_distinct_cat5_"+magasin_to_loop+".png",'utf-8'))
         #print type(y)
         #print y.shape
 
