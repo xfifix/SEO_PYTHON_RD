@@ -27,107 +27,99 @@ def main():
     dataNames=["Category5","Category4","Brand","Vendor","Magasin","State"];
     print "Data fetched : "+ ', '.join(dataNames)
 
-    my_distinct_magasin_request = "select distinct magasin from CATALOG"
-
-    cursor.execute(my_distinct_magasin_request); 
-        # retrieve the records from the database
-    datas = cursor.fetchall()
-    my_magasins = [item[0] for item in datas];
-    #my_magasins = ["Musique","Librairie"];
-    for magasin_to_loop in my_magasins:
-        # execute our Query
-        # X = np.asarray(predictors_list);
-        my_brand_request = "select nb_distinct_brand from CATALOG where nb_distinct_brand is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_brand_request
     
-        # fetching data to display for magasin Musique
-        cursor.execute(my_brand_request,(magasin_to_loop,)); 
-        # retrieve the records from the database
-        numerical_data = cursor.fetchall()
-
-        X= np.asanyarray(numerical_data);
-        #y= np.asanyarray(y);
-        print type(X)
-        print X.shape
-        plt.hist(X)
-        plt.title(unicode("nb_distinct_brand Histogram"+magasin_to_loop,'utf-8'))
-        plt.xlabel("Value")
-        plt.ylabel("Frequency")
-        plt.savefig(unicode(pictures_saving_path+"nb_distinct_brand_"+magasin_to_loop+".png",'utf-8'))
+    # execute our Query
+    # X = np.asarray(predictors_list);
+    my_brand_request = "select nb_distinct_brand from CATALOG where nb_distinct_brand is not null"
+    print "Executing the following request to fetch data for all magasins : " + my_brand_request
+    
+    # fetching data to display for magasin Musique
+    cursor.execute(my_brand_request); 
+    # retrieve the records from the database
+    numerical_data = cursor.fetchall()
+    X= np.asanyarray(numerical_data);
+    #y= np.asanyarray(y);
+    print type(X)
+    print X.shape
+    plt.hist(X)
+    plt.title(unicode("nb_distinct_brand Histogram",'utf-8'))
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.savefig(unicode(pictures_saving_path+"nb_distinct_brand.png",'utf-8'))
         
-        my_magasin_request = "select nb_distinct_magasin from CATALOG where nb_distinct_magasin is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : " +magasin_to_loop+ my_magasin_request
+    my_magasin_request = "select nb_distinct_magasin from CATALOG where nb_distinct_magasin is not null"
+    print "Executing the following request to fetch data for  magasins : " + my_magasin_request
     
-        # fetching data to display for magasin Musique
-        cursor.execute(my_magasin_request,(magasin_to_loop,)); 
-        # retrieve the records from the database
-        numerical_data = cursor.fetchall()
+    # fetching data to display for magasin Musique
+    cursor.execute(my_magasin_request); 
+    # retrieve the records from the database
+    numerical_data = cursor.fetchall()
 
-        X= np.asanyarray(numerical_data);
-        #y= np.asanyarray(y);
-        print type(X)
-        print X.shape
-        plt.hist(X)
-        plt.title(unicode("nb_distinct_magasin Histogram"+magasin_to_loop,'utf-8'))
-        plt.xlabel("Value")
-        plt.ylabel("Frequency")
-        plt.savefig(unicode(pictures_saving_path+"nb_distinct_magasin_"+magasin_to_loop+".png",'utf-8'))
+    X= np.asanyarray(numerical_data);
+    #y= np.asanyarray(y);
+    print type(X)
+    print X.shape
+    plt.hist(X)
+    plt.title(unicode("nb_distinct_magasin Histogram",'utf-8'))
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.savefig(unicode(pictures_saving_path+"nb_distinct_magasin_"+".png",'utf-8'))
         
-        my_state_request = "select nb_distinct_state from CATALOG where nb_distinct_state is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_state_request
+    my_state_request = "select nb_distinct_state from CATALOG where nb_distinct_state is not null"
+    print "Executing the following request to fetch data for  magasins : " + my_state_request
     
-        # fetching data to display for magasin Musique
-        cursor.execute(my_state_request,(magasin_to_loop,)); 
-        # retrieve the records from the database
-        numerical_data = cursor.fetchall()
+    # fetching data to display for magasin Musique
+    cursor.execute(my_state_request); 
+     # retrieve the records from the database
+    numerical_data = cursor.fetchall()
 
-        X= np.asanyarray(numerical_data);
+    X= np.asanyarray(numerical_data);
         #y= np.asanyarray(y);
-        print type(X)
-        print X.shape
-        plt.hist(X)
-        plt.title(unicode('nb_distinct_state_'+magasin_to_loop+'.png','utf-8'))
-        plt.xlabel("Value")
-        plt.ylabel("Frequency")
-        plt.savefig(unicode(pictures_saving_path+"nb_distinct_state_"+magasin_to_loop+".png",'utf-8'))
+    print type(X)
+    print X.shape
+    plt.hist(X)
+    plt.title(unicode('nb_distinct_state_'+'.png','utf-8'))
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.savefig(unicode(pictures_saving_path+"nb_distinct_state_"".png",'utf-8'))
         #print type(y)
         #print y.shape
         
-        my_cat4_request = "select nb_distinct_cat4 from CATALOG where nb_distinct_cat4 is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_cat4_request
+    my_cat4_request = "select nb_distinct_cat4 from CATALOG where nb_distinct_cat4 is not null"
+    print "Executing the following request to fetch data for  magasins : "+ my_cat4_request
     
         # fetching data to display for magasin Musique
-        cursor.execute(my_cat4_request,(magasin_to_loop,)); 
+    cursor.execute(my_cat4_request); 
         # retrieve the records from the database
-        numerical_data = cursor.fetchall()
+    numerical_data = cursor.fetchall()
 
-        X= np.asanyarray(numerical_data);
+    X= np.asanyarray(numerical_data);
         #y= np.asanyarray(y);
-        print type(X)
-        print X.shape
-        plt.hist(X)
-        plt.title(unicode("nb_distinct_cat4 Histogram"+magasin_to_loop,'utf-8'))
-        plt.xlabel("Value")
-        plt.ylabel("Frequency")
-        plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat4_"+magasin_to_loop+".png",'utf-8'))
+    print type(X)
+    print X.shape
+    plt.hist(X)
+    plt.title(unicode("nb_distinct_cat4 Histogram",'utf-8'))
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat4_"+".png",'utf-8'))
         
-        my_cat5_request = "select nb_distinct_cat5 from CATALOG where nb_distinct_cat5 is not null and magasin=(%s)"
-        print "Executing the following request to fetch data for  magasins : "+magasin_to_loop + my_cat5_request
+    my_cat5_request = "select nb_distinct_cat5 from CATALOG where nb_distinct_cat5 is not null"
+    print "Executing the following request to fetch data for  magasins : " + my_cat5_request
     
         # fetching data to display for magasin Musique
-        cursor.execute(my_cat5_request,(magasin_to_loop,)); 
+    cursor.execute(my_cat5_request); 
         # retrieve the records from the database
-        numerical_data = cursor.fetchall()
+    numerical_data = cursor.fetchall()
 
-        X= np.asanyarray(numerical_data);
+    X= np.asanyarray(numerical_data);
         #y= np.asanyarray(y);
-        print type(X)
-        print X.shape
-        plt.hist(X)
-        plt.title(unicode("nb_distinct_cat5 Histogram"+magasin_to_loop,'utf-8'))
-        plt.xlabel("Value")
-        plt.ylabel("Frequency")
-        plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat5_"+magasin_to_loop+".png",'utf-8'))
+    print type(X)
+    print X.shape
+    plt.hist(X)
+    plt.title(unicode("nb_distinct_cat5 Histogram",'utf-8'))
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.savefig(unicode(pictures_saving_path+"nb_distinct_cat5_"+".png",'utf-8'))
         #print type(y)
         #print y.shape
 
