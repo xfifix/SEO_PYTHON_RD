@@ -42,7 +42,7 @@ def main():
     plt.title(unicode("Links Number Histogram",'utf-8'))
     plt.xlabel("Number of links")
     plt.ylabel("Number of Skus")
-    plt.show();
+    #plt.show();
     plt.savefig(unicode(pictures_saving_path+"nblinks_per_nbskus.png",'utf-8'))
         
 if __name__ == "__main__":
