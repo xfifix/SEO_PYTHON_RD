@@ -27,7 +27,7 @@ def main():
   
     # execute our Query
     # X = np.asarray(predictors_list);
-    my_linking_counter_request = "select distinct counter, count(*) from CDS_LINKING_SIMILAR_PRODUCTS group by counter order by counter asc"
+    my_linking_counter_request = "select distinct counter, count(*) from LINKING_SIMILAR_PRODUCTS group by counter order by counter asc"
     print "Executing the following request to fetch data for all magasins : " + my_linking_counter_request
     
     # fetching data to display for magasin Musique
