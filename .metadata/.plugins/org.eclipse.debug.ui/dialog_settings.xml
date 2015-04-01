@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="556" key="org.python.pydev.debug.ui.actions.EvalExpressionAction$DisplayPopupDIALOG_WIDTH"/>
 	<item value="144" key="org.python.pydev.debug.ui.actions.EvalExpressionAction$DisplayPopupDIALOG_HEIGHT"/>
+	<item value="556" key="org.python.pydev.debug.ui.actions.EvalExpressionAction$DisplayPopupDIALOG_WIDTH"/>
 	<section name="org.eclipse.debug.ui.SCOPED_SAVE_SELECTION_DIALOG">
-		<item value="303" key="DIALOG_WIDTH"/>
-		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="311" key="DIALOG_WIDTH"/>
+		<item value="384" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
@@ -12,7 +12,7 @@
 		<item value="org.python.pydev.debug.regularLaunchConfigurationType, " key="org.eclipse.debug.ui.EXPANDED_NODES"/>
 		<item value="640" key="DIALOG_HEIGHT"/>
 		<item value="237" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1"/>
-		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="762" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2"/>
+		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>
