@@ -37,12 +37,12 @@ def main():
     #y= np.asanyarray(y);
     print type(X)
     print X.shape
-    #plt.plot(X)
-    plt.hist(X)
+    plt.plot(X)
+    #plt.hist(X)
     plt.title(unicode("Links Number Histogram",'utf-8'))
     plt.xlabel("Number of links")
     plt.ylabel("Number of Skus")
-    #plt.show();
+    plt.show();
     plt.savefig(unicode(pictures_saving_path+"cds_nblinks_per_nbskus.png",'utf-8'))
         
 if __name__ == "__main__":
