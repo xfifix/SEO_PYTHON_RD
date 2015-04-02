@@ -43,7 +43,7 @@ def main():
     plt.xlabel("Number of links")
     plt.ylabel("Number of Skus")
     #plt.show();
-    plt.savefig(unicode(pictures_saving_path+"nblinks_per_nbskus.png",'utf-8'))
+    plt.savefig(unicode(pictures_saving_path+"kriter_nblinks_per_nbskus.png",'utf-8'))
         
 if __name__ == "__main__":
     main()

@@ -12,7 +12,7 @@ from com.data.fetching.utility import save_histogram_as_csv_file
 def main():
     #Define our connection string
     csv_saving_path = '/home/sduprey/My_Data/My_Kriter_Data/My_Kriter_Results/'
-    current_parameter_checked = 'cds_linking'
+    current_parameter_checked = 'kriter_linking'
     magasin_to_display = ''
 
     conn_string = "host='localhost' dbname='KRITERDB' user='postgres' password='mogette'"
@@ -27,7 +27,7 @@ def main():
   
     # execute our Query
     # X = np.asarray(predictors_list);
-    my_linking_counter_request = "select distinct counter, count(*) from CDS_LINKING_SIMILAR_PRODUCTS group by counter order by counter asc"
+    my_linking_counter_request = "select distinct counter, count(*) from LINKING_SIMILAR_PRODUCTS group by counter order by counter asc"
     print "Executing the following request to fetch data for all magasins : " + my_linking_counter_request
     
     # fetching data to display for magasin Musique

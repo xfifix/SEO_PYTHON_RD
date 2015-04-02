@@ -7,13 +7,12 @@ Created on 17 March 2015
 '''
 import psycopg2
 import numpy as np
-from com.data.fetching.utility import save_histogram_as_csv_file
+import matplotlib.pyplot as plt
 
 def main():
     #Define our connection string
-    csv_saving_path = '/home/sduprey/My_Data/My_Kriter_Data/My_Kriter_Results/'
-    current_parameter_checked = 'cds_linking'
-    magasin_to_display = ''
+    pictures_saving_path = '/home/sduprey/My_Data/My_Kriter_Data/My_Kriter_Pictures/'
+
 
     conn_string = "host='localhost' dbname='KRITERDB' user='postgres' password='mogette'"
     # print the connection string we will use to connect
@@ -38,8 +37,13 @@ def main():
     #y= np.asanyarray(y);
     print type(X)
     print X.shape
-
-    save_histogram_as_csv_file(current_parameter_checked, magasin_to_display,X,csv_saving_path)
+    #plt.plot(X)
+    plt.hist(X)
+    plt.title(unicode("Links Number Histogram",'utf-8'))
+    plt.xlabel("Number of links")
+    plt.ylabel("Number of Skus")
+    #plt.show();
+    plt.savefig(unicode(pictures_saving_path+"cds_nblinks_per_nbskus.png",'utf-8'))
         
 if __name__ == "__main__":
     main()
