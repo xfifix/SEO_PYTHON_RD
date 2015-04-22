@@ -162,8 +162,8 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_VBUltejuEeS3_6AVqAuAVA" elementId="org.python.pydev.navigator.view" ref="_VBZeFejuEeS3_6AVqAuAVA"/>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_VBUltujuEeS3_6AVqAuAVA" containerData="7436" selectedElement="_VBUlt-juEeS3_6AVqAuAVA">
-              <children xsi:type="advanced:Placeholder" xmi:id="_VBUlt-juEeS3_6AVqAuAVA" elementId="org.eclipse.ui.editorss" containerData="8275" ref="_VBY3iujuEeS3_6AVqAuAVA"/>
-              <children xsi:type="basic:PartStack" xmi:id="_VBUluOjuEeS3_6AVqAuAVA" elementId="bottom" containerData="1725" selectedElement="_VBUluujuEeS3_6AVqAuAVA">
+              <children xsi:type="advanced:Placeholder" xmi:id="_VBUlt-juEeS3_6AVqAuAVA" elementId="org.eclipse.ui.editorss" containerData="6328" ref="_VBY3iujuEeS3_6AVqAuAVA"/>
+              <children xsi:type="basic:PartStack" xmi:id="_VBUluOjuEeS3_6AVqAuAVA" elementId="bottom" containerData="3672" selectedElement="_VBUluujuEeS3_6AVqAuAVA">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_VBUluejuEeS3_6AVqAuAVA" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_VBY3vejuEeS3_6AVqAuAVA"/>
@@ -214,7 +214,7 @@
           <tags>persp.actionSet:org.python.pydev.exceptionBreakpoints</tags>
           <tags>persp.showIn:org.eclipse.ui.views.ContentOutline</tags>
           <tags>persp.actionSet:org.python.pydev.pyPropertyTrace</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_VBUlv-juEeS3_6AVqAuAVA" selectedElement="_VBUlwOjuEeS3_6AVqAuAVA">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_VBUlv-juEeS3_6AVqAuAVA" selectedElement="_VBUly-juEeS3_6AVqAuAVA">
             <children xsi:type="basic:PartSashContainer" xmi:id="_VBUlwOjuEeS3_6AVqAuAVA" containerData="2594" selectedElement="_VBUlwejuEeS3_6AVqAuAVA" horizontal="true">
               <children xsi:type="basic:PartStack" xmi:id="_VBUlwejuEeS3_6AVqAuAVA" elementId="org.eclipse.debug.internal.ui.NavigatorFolderView" containerData="3567" selectedElement="_VBUlwujuEeS3_6AVqAuAVA">
                 <tags>newtablook</tags>
@@ -479,7 +479,7 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_VBY3rujuEeS3_6AVqAuAVA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="indexcheck" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;indexcheck.py&quot; partName=&quot;indexcheck&quot; title=&quot;indexcheck&quot; tooltip=&quot;LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1998&quot; selectionTopPixel=&quot;459&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;indexcheck.py&quot; partName=&quot;indexcheck&quot; title=&quot;indexcheck&quot; tooltip=&quot;LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1345&quot; selectionTopPixel=&quot;335&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.python.pydev.editor.PythonEditor</tags>
           <tags>removeOnHide</tags>
@@ -727,7 +727,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBZerejuEeS3_6AVqAuAVA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vbGxMOj4EeSp2a7UbKspVQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_VBdvsejuEeS3_6AVqAuAVA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_bFrAwOkGEeSeQ5ANEe9dMA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_VBdvsejuEeS3_6AVqAuAVA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBZeu-juEeS3_6AVqAuAVA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -757,7 +757,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBaFOOjuEeS3_6AVqAuAVA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vbZFEOj4EeSp2a7UbKspVQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VBdIy-juEeS3_6AVqAuAVA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_bGMlMOkGEeSeQ5ANEe9dMA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VBdIy-juEeS3_6AVqAuAVA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBaFQ-juEeS3_6AVqAuAVA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -4,6 +4,7 @@ import socket
 import time
 from random import randrange
 import random
+import sys, traceback
 
 def process_url_to_file(noindex, urlcdiscount):
 	urlcdiscount=urlcdiscount.rstrip();
@@ -27,9 +28,9 @@ def process_url_to_file(noindex, urlcdiscount):
 	print 'We found '+str(len(matching)) + 'URLs in SERP containing Cdiscount'
 	if urlcdiscount in matching:
 		print 'URL in index'
-		noindex.write(urlcdiscount+"\n")
 	else:
 		print 'URL not in index'
+		noindex.write(urlcdiscount+"\n")
 
 def main():
 	fichierurl = open("/home/sduprey/My_Data/My_Indexation_Checker_Data/urllist.txt", "r")
@@ -43,7 +44,9 @@ def main():
 			time.sleep(randomtimer)
 		except socket.timeout, e:
 			print("socket timeout")
-		except urllib2.HTTPError:
+		except urllib2.HTTPError, e:
+			print 'you got caught' 
+			traceback.print_exc(file=sys.stdout)
 			time.sleep(3600)
 			process_url_to_file(noindex, urlcdiscount)
 		except KeyboardInterrupt:
