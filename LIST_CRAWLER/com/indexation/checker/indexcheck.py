@@ -47,7 +47,7 @@ def main():
 			time.sleep(3600)
 			process_url_to_file(noindex, urlcdiscount)
 		except KeyboardInterrupt:
-			print("W: interrupt received, proceeding…")
+			print("Interrupt received, proceeding")
 			fichierurl.close()
 			noindex.close()
 	

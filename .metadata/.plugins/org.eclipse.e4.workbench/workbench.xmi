@@ -479,7 +479,7 @@
           </menus>
         </children>
         <children xsi:type="basic:Part" xmi:id="_VBY3rujuEeS3_6AVqAuAVA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="indexcheck" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;indexcheck.py&quot; partName=&quot;indexcheck&quot; title=&quot;indexcheck&quot; tooltip=&quot;LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2043&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;indexcheck.py&quot; partName=&quot;indexcheck&quot; title=&quot;indexcheck&quot; tooltip=&quot;LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1998&quot; selectionTopPixel=&quot;459&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.python.pydev.editor.PythonEditor</tags>
           <tags>removeOnHide</tags>
@@ -615,7 +615,7 @@
       <tags>categoryTag:WindowBuilder</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_VBZeFejuEeS3_6AVqAuAVA" elementId="org.python.pydev.navigator.view" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="PyDev Package Explorer" iconURI="platform:/plugin/org.python.pydev/icons/pydev_package_explorer.gif" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1416390408305&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/KRITER_VISUALIZER&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/KRITER_VISUALIZER/com&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/KRITER_VISUALIZER/com/data&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/KRITER_VISUALIZER/com/data/fetching&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation/checker&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/processing&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1416390408305&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation/checker&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/processing&quot;/>&#xA;&lt;selected IMemento.internal.id=&quot;/home/sduprey/My_Code/My_Python_Workspace/LIST_CRAWLER/com/indexation/checker/indexcheck.py&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:PyDev</tags>
       <menus xmi:id="_VBZeFujuEeS3_6AVqAuAVA" elementId="org.python.pydev.navigator.view">
@@ -727,7 +727,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBZerejuEeS3_6AVqAuAVA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_PEE08Oj3EeSbZpOUBUyUAw" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_VBdvsejuEeS3_6AVqAuAVA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vbGxMOj4EeSp2a7UbKspVQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_VBdvsejuEeS3_6AVqAuAVA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBZeu-juEeS3_6AVqAuAVA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -757,7 +757,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBaFOOjuEeS3_6AVqAuAVA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_PEoOkOj3EeSbZpOUBUyUAw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VBdIy-juEeS3_6AVqAuAVA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_vbZFEOj4EeSp2a7UbKspVQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VBdIy-juEeS3_6AVqAuAVA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_VBaFQ-juEeS3_6AVqAuAVA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
