@@ -1,4 +1,4 @@
-import urllib2
+import cookielib, urllib2
 from lxml import etree
 import socket
 import time
@@ -15,8 +15,13 @@ def process_url_to_file(noindex, urlcdiscount):
 	print("User agent choisi : "+user_agent)
 	headers = { 'User-Agent' : user_agent }
 	request = urllib2.Request(urlse,None,headers)
-	proxy_support = urllib2.ProxyHandler({"http":"http://localhost:3128"})
-	opener = urllib2.build_opener(proxy_support)
+#	proxy_support = urllib2.ProxyHandler({"http":"http://localhost:3128"})
+#	opener.addheaders.append(('Cookie', 'test=valeur'))	
+#	opener = urllib2.build_opener(proxy_support)
+	cj = cookielib.CookieJar()
+	ck = cookielib.Cookie(version=0, name='Cassandra', value='1', port=None, port_specified=False, domain='www.cdiscount.com', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={'HttpOnly': None}, rfc2109=False)
+	cj.set_cookie(ck)
+	opener = urllib2.build_opener(urllib2.ProxyHandler({"http":"http://localhost:3128"}), urllib2.HTTPCookieProcessor(cj))
 	urllib2.install_opener(opener)
 	data = urllib2.urlopen(request).read()
 	tree = etree.HTML(data)
