@@ -44,7 +44,7 @@ def main():
 	for urlcdiscount in urllist:
 		try:
 			process_url_to_file(noindex, urlcdiscount)
-			randomtimer = randrange(5, 30)
+			randomtimer = randrange(20, 35)
 			print("Mise en pause : "+str(randomtimer)+" secondes...")
 			time.sleep(randomtimer)
 		except socket.timeout, e:
