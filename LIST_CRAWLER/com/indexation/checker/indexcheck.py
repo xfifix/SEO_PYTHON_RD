@@ -6,11 +6,16 @@ from random import randrange
 import random
 import sys, traceback
 
-def process_url_to_file(noindex, urlcdiscount):
+def load_user_agents(filepath):
+	with open(filepath) as f:
+		contents = f.readlines()
+		contents = [s.rstrip() for s in contents]
+		return contents
+
+def process_url_to_file(noindex, urlcdiscount,user_agent_list):
 	urlcdiscount=urlcdiscount.rstrip();
 	urlse="https://www.google.fr/search?hl=fr&safe=off&num=100&q="+urlcdiscount
 	print(urlse)
-	user_agent_list = ['Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36']
 	user_agent = random.choice(user_agent_list)
 	print("User agent choisi : "+user_agent)
 	headers = { 'User-Agent' : user_agent }
@@ -38,12 +43,15 @@ def process_url_to_file(noindex, urlcdiscount):
 		noindex.write(urlcdiscount+"\n")
 
 def main():
+#	user_agent_list = ['Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0', 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36']
+	user_agents_file_path='/home/sduprey/My_Data/My_User_Agents/user-agent.txt'
+	user_agent_list = load_user_agents(user_agents_file_path)
 	fichierurl = open("/home/sduprey/My_Data/My_Indexation_Checker_Data/urllist.txt", "r")
 	urllist = fichierurl.readlines()
 	noindex = open("/home/sduprey/My_Data/My_Indexation_Checker_Data/noindex.txt", "w")
 	for urlcdiscount in urllist:
 		try:
-			process_url_to_file(noindex, urlcdiscount)
+			process_url_to_file(noindex, urlcdiscount,user_agent_list)
 			randomtimer = randrange(20, 35)
 			print("Mise en pause : "+str(randomtimer)+" secondes...")
 			time.sleep(randomtimer)
@@ -53,7 +61,7 @@ def main():
 			print 'you got caught' 
 			traceback.print_exc(file=sys.stdout)
 			time.sleep(3600)
-			process_url_to_file(noindex, urlcdiscount)
+			process_url_to_file(noindex, urlcdiscount,user_agent_list)
 		except KeyboardInterrupt:
 			print("Interrupt received, proceeding")
 			fichierurl.close()
