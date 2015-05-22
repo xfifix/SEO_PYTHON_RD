@@ -21,13 +21,13 @@ from sklearn.naive_bayes import MultinomialNB
 print(__doc__)
 # we train our data over 100 000  
 print("Loading 100 000 samples randomly for training... ")
-sql_training_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 1000000'
+sql_training_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 100000'
 conn_string = "host='localhost' dbname='CATEGORIZERDB' user='postgres' password='mogette'"
 # print the connection string we will use to connect
  
 # get a connection, if a connect cannot be made an exception will be raised here
 conn = psycopg2.connect(conn_string)
-conn.autocommit = True
+ 
 # conn.cursor will return a cursor object, you can use this cursor to perform queries
 cursor = conn.cursor()
 cursor.execute(sql_training_data_request); 
@@ -52,7 +52,7 @@ y_train = training_outputs
 
 print("Loading 10 000 samples randomly for testing... ")
 
-sql_testing_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 10000'
+sql_testing_data_request = 'select IDENTIFIANT_PRODUIT, DESCRIPTION, LIBELLE from TESTING_DATA'
 cursor.execute(sql_testing_data_request); 
  # retrieve the records from the database
 fetched_testing_data = cursor.fetchall()
@@ -74,7 +74,7 @@ print("n_samples: %d, n_features: %d" % X_test.shape)
 
 ###############################################################################
 # Benchmark classifiers
-def benchmark(cursor, clf_class, params, name):
+def benchmark(clf_class, params, name):
     print("parameters:", params)
     t0 = time()
     clf = clf_class(**params).fit(X_train, y_train)
@@ -97,36 +97,12 @@ def benchmark(cursor, clf_class, params, name):
     cm = confusion_matrix(y_test, pred)
     print("Confusion matrix:")
     print(cm)
-    print("Saving data to database:")
-    save_my_data(cursor, name, testing_identifiant_produit_list, y_test, pred)
-
 
     # Show confusion matrix
     pl.matshow(cm)
     pl.title('Confusion matrix of the %s classifier' % name)
     pl.colorbar()
 
-def save_my_data(cursor, name, testing_identifiant_produit_list, y_test, pred): 
-    my_lists = zip(testing_identifiant_produit_list, y_test, pred.tolist())
-
-    if name == 'SGD':
-        print('saving into SGDClassifier')
-        [insert_into_database(name, cursor,my_list_item[0],my_list_item[1],my_list_item[2]) for my_list_item in my_lists];
-        
-    if name == 'MULTINOMIALNB':
-        print('saving into MultinomialNB') 
-        [insert_into_database(name, cursor,my_list_item[0],my_list_item[1],my_list_item[2]) for my_list_item in my_lists];
-      
-                
-
-def insert_into_database(name, cursor, identifiant_produit, real_category, prediction) : 
-    sql_string = 'INSERT INTO '+name+' (IDENTIFIANT_PRODUIT,REAL_CATEGORY,PREDICTION) VALUES (%s,%s,%s)'
-    cursor.execute(sql_string, (identifiant_produit, real_category, prediction))
-    
-      
-from itertools import chain
-def fetch_data(*args):
-    return list(chain.from_iterable(zip(*args)))
 
 print("Testbenching a linear classifier...")
 parameters = {
@@ -137,11 +113,11 @@ parameters = {
     'fit_intercept': True,
 }
 
-benchmark(cursor, SGDClassifier, parameters, 'SGD')
+benchmark(SGDClassifier, parameters, 'SGD')
 
 print("Testbenching a MultinomialNB classifier...")
 parameters = {'alpha': 0.01}
 
-benchmark(cursor, MultinomialNB, parameters, 'MULTINOMIALNB')
+benchmark(MultinomialNB, parameters, 'MultinomialNB')
 
 pl.show()

@@ -21,7 +21,7 @@ from sklearn.naive_bayes import MultinomialNB
 print(__doc__)
 # we train our data over 100 000  
 print("Loading 100 000 samples randomly for training... ")
-sql_training_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 1000000'
+sql_training_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 1000'
 conn_string = "host='localhost' dbname='CATEGORIZERDB' user='postgres' password='mogette'"
 # print the connection string we will use to connect
  
@@ -52,7 +52,7 @@ y_train = training_outputs
 
 print("Loading 10 000 samples randomly for testing... ")
 
-sql_testing_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 10000'
+sql_testing_data_request = 'select IDENTIFIANT_PRODUIT, CATEGORIE_3, DESCRIPTION, LIBELLE from TRAINING_DATA order by random() limit 100'
 cursor.execute(sql_testing_data_request); 
  # retrieve the records from the database
 fetched_testing_data = cursor.fetchall()
